@@ -1,0 +1,293 @@
+.admin-dashboard {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f9fc 0%, #f0f4f8 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.admin-header {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 0.45rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.admin-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.74rem;
+  color: #64748b;
+}
+
+.admin-alert-pill {
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.admin-alert-pill.clear {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.admin-alert-pill.critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.admin-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.admin-summary-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.admin-summary-title {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #1e3a8a;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid #dbeafe;
+}
+
+.admin-summary-primary {
+  margin: 0.45rem 0 0;
+  font-size: 1.75rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.admin-summary-secondary {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.admin-summary-lines {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.admin-summary-line {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.admin-summary-line-label {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.admin-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.admin-section-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.admin-section-title {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.admin-chart-wrap {
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.admin-kpi-chart {
+  margin-top: 1rem;
+}
+
+.admin-gauge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.admin-gauge-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.admin-gauge-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.875rem;
+  color: #334155;
+  font-weight: 600;
+  text-align: center;
+}
+
+.admin-gauge-value {
+  font-size: 1rem;
+  font-weight: 800;
+  fill: #0f172a;
+}
+
+.admin-gauge-max {
+  font-size: 0.68rem;
+  fill: #64748b;
+}
+
+.admin-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+  color: #ffffff;
+  text-align: left;
+  padding: 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.admin-table td {
+  border-top: 1px solid #f1f5f9;
+  padding: 0.72rem;
+  font-size: 0.8rem;
+  color: #334155;
+}
+
+.admin-role-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.admin-role-teacher {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.admin-role-therapist {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.admin-role-doctor {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.admin-chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.admin-chip {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.admin-chip-class {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.admin-chip-student {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.admin-student-count {
+  margin-bottom: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.admin-muted {
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.admin-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.admin-loading,
+.admin-error {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  color: #334155;
+}
+
+@media (max-width: 992px) {
+  .admin-two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

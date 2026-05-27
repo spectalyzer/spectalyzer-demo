@@ -1,0 +1,9 @@
+.main-content {
+  padding-top: 88px; /* space for fixed navbar (80px) + small gap */
+}
+
+@media (max-width: 940px) {
+  .main-content {
+    padding-top: 88px;
+  }
+}

@@ -1,0 +1,72 @@
+.home-shell {
+  position: relative;
+  background: #0b1120;
+}
+
+.home-step {
+  opacity: 0;
+  transform: translateY(24px);
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.6s ease;
+  scroll-margin-top: 160px;
+}
+
+.home-step.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 5000px;
+  pointer-events: auto;
+}
+
+.home-step-control {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  z-index: 60;
+}
+
+.home-step-button {
+  border: none;
+  padding: 1.1rem 2.6rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #38bdf8, #6366f1);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  box-shadow: 0 18px 28px rgba(56, 189, 248, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.home-step-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 36px rgba(99, 102, 241, 0.3);
+}
+
+.home-step-meta {
+  font-size: 0.75rem;
+  color: #cbd5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 768px) {
+  .home-step-control {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+  }
+
+  .home-step-button {
+    padding: 0.9rem 2rem;
+  }
+}

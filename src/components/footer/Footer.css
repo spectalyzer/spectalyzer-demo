@@ -1,0 +1,102 @@
+/* ── Footer — Clean White/Light Theme ──────────────────────── */
+
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  margin-top: 4rem;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  gap: 2.5rem;
+  padding: 3rem 2.5rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.85rem;
+  display: inline-block;
+}
+
+.footer__description {
+  margin: 0;
+  max-width: 32rem;
+  line-height: 1.75;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.footer__links, .footer__contact { display:flex; flex-direction:column; gap:0.6rem; }
+
+.footer__links h3, .footer__contact h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.footer__links a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.footer__links a:hover { color: #a5b4fc; transform: translateX(2px); display: inline-block; }
+
+.footer__contact p { margin:0; color:#64748b; font-size:0.875rem; line-height:1.65; }
+
+.footer__bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem 2.5rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__bottom p { margin:0; color:#475569; font-size:0.8rem; }
+
+.footer__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #818cf8;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .footer__inner { grid-template-columns:1fr; padding:2.5rem 1.5rem 1.75rem; }
+  .footer__bottom { padding:1.25rem 1.5rem 2rem; flex-direction:column; text-align:center; }
+}

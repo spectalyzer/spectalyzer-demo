@@ -1,0 +1,10 @@
+{
+    "BACKEND_URL": "http://localhost:8000",
+    "API_PATH": {
+        "DATA_ENTRY": "/api/user",
+        "FINAL_SCORE": "/api/user",
+        "GET_ENTRY": "/api/user",
+        "GRAPH_DATA": "/api/user",
+        "USER_AUTH": "/api/user"
+    }
+}

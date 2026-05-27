@@ -1,0 +1,19 @@
+.student-layout {
+  min-height: 100vh;
+}
+
+.student-layout__body {
+  padding-top: 80px;
+}
+
+.student-layout__content {
+  min-height: calc(100vh - 80px);
+  padding-left: 260px;
+  background: #f8fafc;
+}
+
+@media (max-width: 767px) {
+  .student-layout__content {
+    padding-left: 72px;
+  }
+}

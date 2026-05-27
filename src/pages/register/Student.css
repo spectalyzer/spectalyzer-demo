@@ -1,0 +1,427 @@
+/* ── Registration Page — Clean White Theme ──────────────────── */
+
+.student-reg {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f1f5f9 0%, #e8edf5 100%);
+  padding-bottom: 5rem;
+}
+
+/* ── Page layout container ───────────────────────────────────── */
+.reg-page-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  padding-top: calc(var(--navbar-h, 72px) + 2.5rem);
+}
+
+/* ── Page header ─────────────────────────────────────────────── */
+.reg-page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reg-page-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6366f1;
+  margin-bottom: 0.9rem;
+}
+
+.reg-page-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.reg-page-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ── Role selector cards ─────────────────────────────────────── */
+.role-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.75rem;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.05);
+  position: relative;
+}
+
+.role-card:hover {
+  border-color: rgba(99,102,241,0.4);
+  background: rgba(99,102,241,0.03);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99,102,241,0.1);
+}
+
+.role-card.selected {
+  border-color: #6366f1;
+  background: rgba(99,102,241,0.06);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.18);
+}
+
+.role-card.selected::before {
+  content: '✓';
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #6366f1;
+  background: rgba(99,102,241,0.12);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-card-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.role-card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  text-align: center;
+}
+
+.role-card.selected .role-card-label {
+  color: #4f46e5;
+}
+
+/* ── Main form card ──────────────────────────────────────────── */
+.reg-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 12px rgba(15,23,42,0.07);
+  animation: fadeInUp 0.35s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity:0; transform: translateY(16px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+.reg-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6366f1;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.25rem;
+}
+
+/* ── 2-column grid ───────────────────────────────────────────── */
+.reg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.reg-grid-full {
+  grid-column: 1 / -1;
+}
+
+/* ── Field group ─────────────────────────────────────────────── */
+.reg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.reg-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.reg-label .star { color: #ef4444; margin-left: 2px; }
+
+.reg-input,
+.reg-select {
+  height: 46px;
+  padding: 0 1rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 11px;
+  color: #0f172a;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.reg-input::placeholder { color: #cbd5e1; }
+
+.reg-input:hover,
+.reg-select:hover {
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+.reg-input:focus,
+.reg-select:focus {
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+.reg-select option { background: #ffffff; color: #0f172a; }
+
+.reg-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+
+/* Select wrapper for custom arrow */
+.reg-select-wrap {
+  position: relative;
+}
+.reg-select-wrap::after {
+  content: '▾';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+/* Date */
+input[type="date"] { color-scheme: light; }
+
+/* ── Checkbox row ─────────────────────────────────────────────── */
+.reg-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reg-checkbox-row:hover {
+  border-color: rgba(99,102,241,0.3);
+  background: rgba(99,102,241,0.03);
+}
+
+.reg-checkbox-row input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.3);
+}
+
+.custom-checkbox::after {
+  content: '';
+  display: none;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after { display: block; }
+
+.reg-checkbox-row .reg-check-label {
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ── Submit button ────────────────────────────────────────────── */
+.reg-submit-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.submit-btn {
+  height: 52px;
+  padding: 0 3rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(99,102,241,0.3);
+  transition: all 0.22s ease;
+  min-width: 220px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+  box-shadow: 0 10px 28px rgba(99,102,241,0.4);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+/* ── Inline alert banner ─────────────────────────────────────── */
+.reg-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1.5px solid;
+  margin: 0.25rem 0 0.75rem;
+  animation: alertSlide 0.25s ease both;
+  line-height: 1.45;
+}
+
+@keyframes alertSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reg-alert--error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.reg-alert--success {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.reg-alert__icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.reg-alert__msg { flex: 1; }
+
+.reg-alert__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: inherit;
+  opacity: 0.5;
+  padding: 0;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+.reg-alert__close:hover { opacity: 1; }
+
+/* ── Info banner (role-specific) ──────────────────────────────── */
+.role-info-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: rgba(99,102,241,0.06);
+  border: 1px solid rgba(99,102,241,0.18);
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  color: #4338ca;
+}
+
+.role-info-banner .info-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Heading styles (old compat) ─────────────────────────────── */
+.student-register-heading { display: none; } /* hidden — replaced by reg-page-header */
+.warning-text { display: none; }
+.field-title { display: none; }
+.applicants-info { display: none; }
+.single-field { display: none; }
+.reg-form > .field-title,
+.reg-form > .applicants-info,
+.reg-form > .single-field { display: none; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .reg-grid { grid-template-columns: 1fr; }
+  .role-selector { grid-template-columns: repeat(2, 1fr); }
+  .reg-card { padding: 1.25rem; }
+  .reg-page-title { font-size: 1.6rem; }
+}
+
+@media (max-width: 380px) {
+  .role-selector { grid-template-columns: repeat(2, 1fr); }
+}

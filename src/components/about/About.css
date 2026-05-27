@@ -1,0 +1,139 @@
+.about-pro {
+  padding: 5rem 1.25rem 6rem;
+  background: radial-gradient(circle at top, rgba(30, 41, 59, 0.65), rgba(2, 6, 23, 0.95));
+  color: #e2e8f0;
+  font-family: "Montserrat", sans-serif;
+  scroll-margin-top: 120px;
+}
+
+.about-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.about-title {
+  font-size: clamp(2rem, 2.2vw, 2.6rem);
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.about-title span {
+  color: #38bdf8;
+}
+
+.about-subtitle {
+  font-size: 1rem;
+  color: #cbd5f5;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
+}
+
+.about-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.35);
+}
+
+.about-card-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.about-card-icon img {
+  height: 26px;
+  width: 26px;
+  object-fit: contain;
+}
+
+.about-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: #f8fafc;
+}
+
+.about-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+.about-media {
+  display: flex;
+  justify-content: center;
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.8);
+  max-width: 520px;
+}
+
+.about-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+}
+
+.about-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.9rem 1.1rem;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0.95));
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    gap: 2rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-image-card img {
+    max-width: 100%;
+  }
+}

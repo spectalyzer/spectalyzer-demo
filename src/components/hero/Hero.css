@@ -1,0 +1,178 @@
+/* ── Hero Section — Clean White/Light Theme ─────────────────── */
+
+.hero-parallax {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  transition: background-position 0.1s linear;
+}
+
+/* Lighter overlay so the image shows through nicely */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(15,23,42,0.55) 0%, rgba(15,23,42,0.35) 50%, rgba(15,23,42,0.7) 100%);
+}
+
+/* ── Hero content ────────────────────────────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: var(--navbar-h, 72px);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── Glass panel ─────────────────────────────────────────────── */
+.hero-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 28px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.1);
+  max-width: 780px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: panelIn 0.7s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+.hero-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8) 40%, rgba(99,102,241,0.8) 70%, transparent);
+}
+
+@keyframes panelIn {
+  from { opacity:0; transform: translateY(36px) scale(0.96); }
+  to   { opacity:1; transform: translateY(0) scale(1); }
+}
+
+/* ── Eyebrow ─────────────────────────────────────────────────── */
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+/* ── Title ───────────────────────────────────────────────────── */
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Subtitle ────────────────────────────────────────────────── */
+.hero-subtitle {
+  margin: 1.3rem auto 0;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* ── Chips ───────────────────────────────────────────────────── */
+.hero-chips {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.hero-chip {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.82rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+.hero-chip:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.6);
+  transform: translateY(-2px);
+}
+
+/* ── CTA ─────────────────────────────────────────────────────── */
+.hero-cta {
+  margin-top: 2rem;
+  padding: 0.95rem 2.25rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 32px rgba(99,102,241,0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transition: left 0.4s ease;
+}
+
+.hero-cta:hover::before { left: 100%; }
+.hero-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 44px rgba(99,102,241,0.55);
+}
+
+.hero-cta-icon { margin-left: 0.6rem; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-content { padding-top: calc(var(--navbar-h,72px) + 1rem); padding-left:1rem; padding-right:1rem; }
+  .hero-panel { padding: 2rem 1.5rem; border-radius: 20px; }
+  .hero-title { font-size: 2.1rem; }
+}
+@media (max-width: 480px) {
+  .hero-panel { padding: 1.75rem 1.25rem; }
+  .hero-title { font-size: 1.85rem; }
+}
